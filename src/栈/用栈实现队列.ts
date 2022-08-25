@@ -1,4 +1,4 @@
-class MyQueue {
+class MyQueue1 {
   stack1: number[] = [];
   stack2: number[] = [];
 
