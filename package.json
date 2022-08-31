@@ -2,7 +2,7 @@
   "name": "vite-typescript-starter",
   "type": "modules",
   "scripts": {
-    "build": "tsc"
+    "dev": "tsc src/**/*.ts -w --outDir dist"
   },
   "devDependencies": {
     "typescript": "^4.6.4"
