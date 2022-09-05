@@ -1,3 +1,1 @@
-# vitejs-vite-3xd9lo
-
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/vitejs-vite-3xd9lo)
+[语雀](https://www.yuque.com/u22409297/aqgf01/botzrc)
