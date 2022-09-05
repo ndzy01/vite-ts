@@ -1,4 +1,4 @@
-function inorderTraversal(root: TreeNode | null): number[] {
+function inorderTraversal1(root: TreeNode | null): number[] {
   const stack: number[] = [];
 
   const loop = (tree: TreeNode | null) => {
