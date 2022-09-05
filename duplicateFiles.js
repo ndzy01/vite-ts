@@ -74,4 +74,3 @@ const duplicateFiles = () => {
 };
 
 console.log(duplicateFiles());
-// fs.writeFileSync('data.txt', JSON.stringify(duplicateFiles()));
