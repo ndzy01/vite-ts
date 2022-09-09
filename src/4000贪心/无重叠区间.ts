@@ -1,4 +1,3 @@
-// 贪心
 function eraseOverlapIntervals(intervals: number[][]): number {
   if (!intervals.length) return 0;
 
@@ -19,7 +18,7 @@ function eraseOverlapIntervals(intervals: number[][]): number {
   return len - ans;
 }
 
-// 动态规划 不明白
+// 不明白
 function eraseOverlapIntervals1(intervals: number[][]): number {
   if (!intervals.length) return 0;
 
