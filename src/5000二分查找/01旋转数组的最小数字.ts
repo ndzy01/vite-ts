@@ -1,4 +1,4 @@
-function minArray(numbers: number[]): number {
+const minArray = (numbers: number[]): number => {
   let left = 0;
   let right = numbers.length - 1;
 
@@ -15,4 +15,6 @@ function minArray(numbers: number[]): number {
   }
 
   return numbers[left];
-}
+};
+
+console.log(minArray([3, 4, 5, 1, 2]));
