@@ -1,4 +1,4 @@
-function generateParenthesis(n: number): string[] {
+const generateParenthesis = (n: number): string[] => {
   if (n == 0) return [];
 
   const res: string[] = [];
@@ -37,4 +37,6 @@ function generateParenthesis(n: number): string[] {
     backtrack(left, right - 1, [...track], res);
     track.pop();
   }
-}
+};
+
+console.log(generateParenthesis(3));
