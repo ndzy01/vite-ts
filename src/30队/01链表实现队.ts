@@ -31,7 +31,6 @@ class DummyTailNode implements AbstractNode {
   }
 }
 
-// @ts-ignore
 class MyQueue<T> {
   dummyHead: DummyHeadNode;
   dummyTail: DummyTailNode;
@@ -47,10 +46,10 @@ class MyQueue<T> {
 
   enqueue(value: T): number {
     const node = new LNode(value);
-
     const prevLast = this.dummyTail.prev;
+
     // @ts-ignore
-    prevLast?.next = node;
+    prevLast.next = node;
     node.prev = prevLast;
     node.next = this.dummyTail;
     this.dummyTail.prev = node;
@@ -61,18 +60,17 @@ class MyQueue<T> {
   }
 
   dequeue(): T | undefined {
-    if (this.isEmpty()) {
-      return undefined;
-    }
+    if (this.isEmpty()) return undefined;
 
     const node = this.dummyHead.next;
     const newFirst = node?.next;
+
     // @ts-ignore
     this.dummyHead.next = newFirst;
     // @ts-ignore
-    newFirst?.prev = this.dummyHead;
+    newFirst.prev = this.dummyHead;
     // @ts-ignore
-    node?.next = null;
+    node.next = null;
 
     this.length--;
 
@@ -85,18 +83,14 @@ class MyQueue<T> {
   }
 
   front(): T | undefined {
-    if (this.isEmpty()) {
-      return undefined;
-    }
+    if (this.isEmpty()) return undefined;
 
     // @ts-ignore
     return this.dummyHead.next.value;
   }
 
   back(): T | undefined {
-    if (this.isEmpty()) {
-      return undefined;
-    }
+    if (this.isEmpty()) return undefined;
 
     // @ts-ignore
     return this.dummyTail.prev.value;
@@ -107,5 +101,14 @@ class MyQueue<T> {
   }
 }
 
-const t = new MyQueue();
-console.log(t);
+const myQueue = new MyQueue();
+myQueue.enqueue(1);
+myQueue.enqueue(2);
+myQueue.enqueue(3);
+myQueue.enqueue(4);
+console.log(myQueue);
+console.log(myQueue.dequeue());
+console.log(myQueue.isEmpty());
+console.log(myQueue.front());
+console.log(myQueue.back());
+console.log(myQueue.len());

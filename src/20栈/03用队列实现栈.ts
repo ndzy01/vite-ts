@@ -38,9 +38,8 @@ class MyStack1 {
 
   pop(): number {
     //  减少交换次数,只有 queue1 为空时才交换
-    if (!this.queue1.length) {
+    if (!this.queue1.length)
       [this.queue1, this.queue2] = [this.queue2, this.queue1];
-    }
 
     while (this.queue1.length > 1) {
       this.queue2.push(this.queue1.shift() as number);
