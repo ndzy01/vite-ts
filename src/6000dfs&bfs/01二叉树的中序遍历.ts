@@ -16,8 +16,10 @@ const inorderTraversal1 = (root: TreeNode | null): number[] => {
   return stack;
 };
 
-inorderTraversal1({
-  val: 2,
-  left: { val: 5, left: null, right: null },
-  right: { val: 7, left: null, right: null },
-});
+console.log(
+  inorderTraversal1({
+    val: 2,
+    left: { val: 5, left: null, right: null },
+    right: { val: 7, left: null, right: null },
+  }),
+);

@@ -1,3 +1,5 @@
+import { ListNode } from '../index';
+
 const hasCycle1 = (head: ListNode | null): boolean => {
   const map = new Map();
 
@@ -6,9 +8,7 @@ const hasCycle1 = (head: ListNode | null): boolean => {
 
     map.set(head, true); // 否则加入 map
 
-    if (!head.next) {
-      return false;
-    }
+    if (!head.next) return false;
 
     head = head.next; // 迭代节点
   }
@@ -27,10 +27,19 @@ const hasCycle2 = (head: ListNode | null): boolean => {
     slow = slow.next;
     fast = fast.next.next;
 
-    if (fast == slow) {
-      return true;
-    }
+    if (fast == slow) return true;
   }
 
   return false;
 };
+
+console.log(
+  hasCycle1({
+    val: 3,
+    next: { val: 9, next: null },
+  }),
+  hasCycle2({
+    val: 3,
+    next: { val: 9, next: null },
+  }),
+);

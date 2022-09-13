@@ -29,14 +29,14 @@ const levelOrder = (root: TreeNode | null): number[][] => {
   return res;
 };
 
-const res = levelOrder({
-  val: 3,
-  left: { val: 9, left: null, right: null },
-  right: {
-    val: 20,
-    left: { val: 15, left: null, right: null },
-    right: { val: 7, left: null, right: null },
-  },
-});
-
-console.log(res);
+console.log(
+  levelOrder({
+    val: 3,
+    left: { val: 9, left: null, right: null },
+    right: {
+      val: 20,
+      left: { val: 15, left: null, right: null },
+      right: { val: 7, left: null, right: null },
+    },
+  }),
+);
