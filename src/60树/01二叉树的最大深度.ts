@@ -1,14 +1,24 @@
-function maxDepthDfs(root: TreeNode | null): number {
+import { TreeNode } from '../index';
+
+const maxDepthDfs = (root: TreeNode | null): number => {
   if (!root) {
     return 0;
   } else {
     const left = maxDepthDfs(root.left); // 递归左子树
     const right = maxDepthDfs(root.right); // 递归右子树
-    return Math.max(left, right) + 1; // 左节点和有节点深度的较大者 + 1
+    return Math.max(left, right) + 1; // 左子树和右子树深度的较大者 +1
   }
-}
+};
 
-function maxDepthBfs(root: TreeNode | null): number {
+console.log(
+  maxDepthDfs({
+    val: 2,
+    left: { val: 5, left: null, right: null },
+    right: { val: 7, left: null, right: null },
+  }),
+);
+
+const maxDepthBfs = (root: TreeNode | null): number => {
   if (root == null) return 0;
 
   const queue = [root];
@@ -28,9 +38,17 @@ function maxDepthBfs(root: TreeNode | null): number {
       if (cur.right) queue.push(cur.right);
     }
 
-    // 当前层所有节点已经出列，如果队列不为空，说明有下一层节点，depth+1
+    // 当前层所有节点已经出列，如果队列不为空，说明有下一层节点，depth +1
     if (queue.length) depth++;
   }
 
   return depth;
-}
+};
+
+console.log(
+  maxDepthBfs({
+    val: 2,
+    left: { val: 5, left: null, right: null },
+    right: { val: 7, left: null, right: null },
+  }),
+);
