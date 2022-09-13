@@ -1,6 +1,6 @@
 // TODO 后面再研究
 
-function mergeSort(nums: number[]): number[] {
+const mergeSort = (nums: number[]): number[] => {
   // 采用自上而下的递归方法
   const len = nums.length;
 
@@ -11,9 +11,9 @@ function mergeSort(nums: number[]): number[] {
     right = nums.slice(middle);
 
   return merge(mergeSort(left), mergeSort(right));
-}
+};
 
-function merge(left: number[], right: number[]) {
+const merge = (left: number[], right: number[]) => {
   const result: number[] = [];
 
   while (left.length && right.length) {
@@ -29,6 +29,6 @@ function merge(left: number[], right: number[]) {
   while (right.length) result.push(right.shift() as number);
 
   return result;
-}
+};
 
 console.log(mergeSort([10, 1, 2, 5, 3, 9, 8, 6]));
