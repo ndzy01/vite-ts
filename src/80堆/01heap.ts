@@ -102,3 +102,6 @@ class Heap {
     return this.data.length;
   }
 }
+
+const heap = new Heap();
+console.log(heap);
