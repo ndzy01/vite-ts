@@ -1,4 +1,4 @@
-function moveZeroes(nums: number[]): number[] {
+const moveZeroes = (nums: number[]): number[] => {
   let j = 0;
 
   for (let i = 0; i < nums.length; i++) {
@@ -10,9 +10,11 @@ function moveZeroes(nums: number[]): number[] {
   }
 
   for (let i = j; i < nums.length; i++) {
-    // 剩下的元素全是0
+    // 剩下的元素全是 0
     nums[i] = 0;
   }
 
   return nums;
-}
+};
+
+console.log(moveZeroes([0, 1, 0, 3, 12]));
