@@ -26,7 +26,17 @@ class MyQueue1 {
     return head;
   }
 
-  empty(): boolean {
+  isEmpty(): boolean {
     return !this.stack1.length && !this.stack2.length;
   }
 }
+
+const queue = new MyQueue1();
+queue.push(1);
+queue.push(2);
+queue.push(3);
+console.log(queue);
+console.log(queue.peek());
+console.log(queue.pop());
+console.log(queue.isEmpty());
+console.log(queue);

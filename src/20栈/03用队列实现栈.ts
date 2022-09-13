@@ -3,6 +3,7 @@ class MyStack {
 
   push(x: number): void {
     let len = this.queue.length;
+
     this.queue.push(x);
 
     while (len--) {
@@ -22,7 +23,7 @@ class MyStack {
     return top;
   }
 
-  empty(): boolean {
+  isEmpty(): boolean {
     return !this.queue.length;
   }
 }
@@ -36,7 +37,7 @@ class MyStack1 {
   }
 
   pop(): number {
-    //  减少交换测试 queue1 为空时交换
+    //  减少交换次数,只有 queue1 为空时才交换
     if (!this.queue1.length) {
       [this.queue1, this.queue2] = [this.queue2, this.queue1];
     }
@@ -57,7 +58,27 @@ class MyStack1 {
     return top;
   }
 
-  empty(): boolean {
+  isEmpty(): boolean {
     return !this.queue1.length && !this.queue2.length;
   }
 }
+
+const myStack = new MyStack();
+myStack.push(1);
+myStack.push(2);
+myStack.push(3);
+console.log(myStack);
+console.log(myStack.top());
+console.log(myStack.isEmpty());
+console.log(myStack.pop());
+console.log(myStack);
+
+const myStack1 = new MyStack1();
+myStack1.push(1);
+myStack1.push(2);
+myStack1.push(3);
+console.log(myStack1);
+console.log(myStack1.top());
+console.log(myStack1.isEmpty());
+console.log(myStack1.pop());
+console.log(myStack1);
