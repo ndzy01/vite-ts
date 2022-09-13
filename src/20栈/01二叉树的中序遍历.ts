@@ -1,3 +1,5 @@
+import { TreeNode } from '../index';
+
 function inorderTraversal(root: TreeNode | null): number[] {
   const stack: number[] = [];
 
@@ -15,3 +17,11 @@ function inorderTraversal(root: TreeNode | null): number[] {
 
   return stack;
 }
+
+console.log(
+  inorderTraversal({
+    val: 2,
+    left: { val: 7, left: null, right: null },
+    right: { val: 5, left: null, right: null },
+  }),
+);

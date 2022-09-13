@@ -1,6 +1,6 @@
 {
   "name": "vite-typescript-starter",
-  "type": "modules",
+  "type": "module",
   "scripts": {
     "dev": "tsc src/**/*.ts -w --outDir dist --target es6"
   },
