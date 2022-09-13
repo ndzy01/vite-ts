@@ -1,7 +1,9 @@
-function mergeTwoLists1(
+import { ListNode } from '../index';
+
+const mergeTwoLists1 = (
   list1: ListNode | null,
   list2: ListNode | null,
-): ListNode | null {
+): ListNode | null => {
   if (list1 === null) {
     return list2;
   } else if (list2 === null) {
@@ -15,12 +17,19 @@ function mergeTwoLists1(
 
     return list2;
   }
-}
+};
 
-function mergeTwoLists2(
+console.log(
+  mergeTwoLists1(
+    { val: 1, next: { val: 2, next: { val: 4, next: null } } },
+    { val: 1, next: { val: 3, next: { val: 4, next: null } } },
+  ),
+);
+
+const mergeTwoLists2 = (
   list1: ListNode | null,
   list2: ListNode | null,
-): ListNode | null {
+): ListNode | null => {
   const preHead = new ListNode(-1);
 
   let prev = preHead;
@@ -42,4 +51,11 @@ function mergeTwoLists2(
   prev.next = list1 === null ? list2 : list1;
 
   return preHead.next;
-}
+};
+
+console.log(
+  mergeTwoLists2(
+    { val: 1, next: { val: 2, next: { val: 4, next: null } } },
+    { val: 1, next: { val: 3, next: { val: 4, next: null } } },
+  ),
+);
