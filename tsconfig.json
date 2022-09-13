@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
-    "target": "es2015",
+    "target": "es6",
     "useDefineForClassFields": true,
-    "module": "ESNext",
-    "lib": ["ESNext", "DOM", "es6"],
+    "module": "es6",
+    "lib": ["es6", "DOM"],
     "moduleResolution": "Node",
     "strict": true,
     "sourceMap": true,
@@ -15,7 +15,9 @@
     "noUnusedParameters": true,
     "noImplicitReturns": true,
     "skipLibCheck": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "removeComments": true, // 是否在输出文件中清除源文件中的注释
+    "outDir": "dist"
   },
-  "include": ["src", "global.d.ts"]
+  "include": ["src"]
 }

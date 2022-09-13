@@ -2,7 +2,7 @@
   "name": "vite-typescript-starter",
   "type": "modules",
   "scripts": {
-    "dev": "tsc src/**/*.ts -w --outDir dist"
+    "dev": "tsc src/**/*.ts -w --outDir dist --target es6"
   },
   "devDependencies": {
     "@types/node": "^18.7.14",
