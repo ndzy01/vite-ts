@@ -1,6 +1,6 @@
 import { TreeNode } from '../index';
 
-function inorderTraversal(root: TreeNode | null): number[] {
+const inorderTraversal = (root: TreeNode | null): number[] => {
   const stack: number[] = [];
 
   const loop = (tree: TreeNode | null) => {
@@ -16,7 +16,7 @@ function inorderTraversal(root: TreeNode | null): number[] {
   loop(root);
 
   return stack;
-}
+};
 
 console.log(
   inorderTraversal({
