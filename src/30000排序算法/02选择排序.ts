@@ -1,3 +1,5 @@
+// TODO 后面再研究
+
 const selectionSort = (nums: number[]): number[] => {
   const len = nums.length;
   let minIndex;

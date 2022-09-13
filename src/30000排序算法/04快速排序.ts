@@ -1,4 +1,5 @@
-// 不清楚
+// TODO 后面再研究
+
 function quickSort(nums: number[], left: number, right: number) {
   let len = nums.length,
     partitionIndex,

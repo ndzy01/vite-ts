@@ -1,10 +1,10 @@
+// TODO 后面再研究
+
 function mergeSort(nums: number[]): number[] {
   // 采用自上而下的递归方法
   const len = nums.length;
 
-  if (len < 2) {
-    return nums;
-  }
+  if (len < 2) return nums;
 
   const middle = Math.floor(len / 2),
     left = nums.slice(0, middle),
