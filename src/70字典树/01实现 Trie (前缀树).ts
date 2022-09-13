@@ -43,3 +43,8 @@ class Trie {
     return !!this.searchPrefix(prefix);
   }
 }
+
+const trie = new Trie();
+trie.insert('Hello zy');
+console.log(trie.search('Hello zy'));
+console.log(trie.startsWith('He'));
