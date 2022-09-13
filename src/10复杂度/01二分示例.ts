@@ -1,6 +1,12 @@
-const search = (nums: number[], target: number) => {
+/**
+ * @description 获取目标 target 在数组里面的索引
+ * @param nums
+ * @param target
+ */
+const search = (nums: number[], target: number): number => {
   let left = 0;
   let right = nums.length - 1;
+
   while (left < right) {
     const mid = (left + right) >>> 1;
 
@@ -12,6 +18,7 @@ const search = (nums: number[], target: number) => {
       right = mid - 1;
     }
   }
+
   return -1;
 };
 
