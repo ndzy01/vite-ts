@@ -1,4 +1,4 @@
-function lengthOfLongestSubstring(s: string): number {
+const lengthOfLongestSubstring = (s: string): number => {
   const set = new Set(); // 用以判断滑动窗口内是否有重复元素
   let i = 0, // 滑动窗口右边界
     j = 0, // 滑动窗口左边界
@@ -23,4 +23,6 @@ function lengthOfLongestSubstring(s: string): number {
   }
 
   return maxLength;
-}
+};
+
+console.log(lengthOfLongestSubstring('abcabcbb'));
