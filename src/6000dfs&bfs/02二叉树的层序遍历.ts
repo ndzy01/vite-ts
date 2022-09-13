@@ -1,9 +1,9 @@
-function levelOrder(root: TreeNode | null): number[][] {
+import { TreeNode } from '../index';
+
+const levelOrder = (root: TreeNode | null): number[][] => {
   const res: number[][] = [];
 
-  if (!root) {
-    return res;
-  }
+  if (!root) return res;
 
   const queue: TreeNode[] = [];
 
@@ -27,7 +27,7 @@ function levelOrder(root: TreeNode | null): number[][] {
   }
 
   return res;
-}
+};
 
 const res = levelOrder({
   val: 3,
