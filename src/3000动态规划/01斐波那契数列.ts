@@ -1,13 +1,15 @@
 // 暴力递归
-function fib1(n: number): number {
+const fib1 = (n: number): number => {
   if (n === 0) return 0;
   if (n === 1) return 1;
 
   return fib1(n - 1) + fib1(n - 2);
-}
+};
+
+console.log(fib1(5));
 
 // 递归 + 记忆
-function fib2(n: number): number {
+const fib2 = (n: number): number => {
   const memo: Record<string, number> = {}; // 计算出的结果进行缓存
 
   const loop = (x: number): number => {
@@ -21,10 +23,12 @@ function fib2(n: number): number {
   };
 
   return loop(n);
-}
+};
+
+console.log(fib2(5));
 
 // 动态规划
-function fib3(n: number): number {
+const fib3 = (n: number): number => {
   if (n <= 1) return n;
 
   const dp = [0, 1];
@@ -35,10 +39,12 @@ function fib3(n: number): number {
   }
 
   return dp[n];
-}
+};
+
+console.log(fib3(5));
 
 // 动态规划 + 滚动数组
-function fib4(n: number): number {
+const fib4 = (n: number): number => {
   if (n <= 1) return n;
 
   const dp = [0, 1];
@@ -51,4 +57,6 @@ function fib4(n: number): number {
   }
 
   return sum;
-}
+};
+
+console.log(fib4(5));
