@@ -1,4 +1,6 @@
-function eraseOverlapIntervals(intervals: number[][]): number {
+// TODO 后面再研究
+
+const eraseOverlapIntervals = (intervals: number[][]): number => {
   if (!intervals.length) return 0;
 
   // 按右边界排序
@@ -16,10 +18,10 @@ function eraseOverlapIntervals(intervals: number[][]): number {
   }
 
   return len - ans;
-}
+};
 
 // 不明白
-function eraseOverlapIntervals1(intervals: number[][]): number {
+const eraseOverlapIntervals1 = (intervals: number[][]): number => {
   if (!intervals.length) return 0;
 
   // 按右边界排序
@@ -37,4 +39,21 @@ function eraseOverlapIntervals1(intervals: number[][]): number {
   }
 
   return len - Math.max(...dp);
-}
+};
+
+console.log(
+  eraseOverlapIntervals([
+    [1, 2],
+    [2, 3],
+    [3, 4],
+    [1, 3],
+  ]),
+);
+
+console.log(
+  eraseOverlapIntervals1([
+    [1, 2],
+    [1, 2],
+    [1, 2],
+  ]),
+);
