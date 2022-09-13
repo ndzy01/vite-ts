@@ -1,4 +1,4 @@
-function longestPalindrome(s: string): string {
+const longestPalindrome = (s: string): string => {
   let n = s.length;
   let res = '';
   let dp = Array.from(new Array(n), () => new Array(n).fill(false)); // 初始化数组
@@ -13,10 +13,12 @@ function longestPalindrome(s: string): string {
 
       if (dp[i][j] && j - i + 1 > res.length) {
         // 当前回文子串比之前的大，更新最大长度
-
         res = s.substring(i, j + 1);
       }
     }
   }
+
   return res;
-}
+};
+
+console.log(longestPalindrome('cbbd'));
