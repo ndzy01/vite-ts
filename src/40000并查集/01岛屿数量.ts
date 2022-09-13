@@ -1,3 +1,5 @@
+// TODO 后面再研究
+
 class UnionFind {
   count: number;
   parent;
@@ -56,7 +58,7 @@ class UnionFind {
   }
 }
 
-function numIslands(grid: string[][]): number {
+const numIslands = (grid: string[][]): number => {
   let m = grid.length;
 
   if (m === 0) return 0;
@@ -89,4 +91,4 @@ function numIslands(grid: string[][]): number {
   }
 
   return uf.getCount(); // 返回并查集的个数减一就行
-}
+};
