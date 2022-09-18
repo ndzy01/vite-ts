@@ -3,7 +3,7 @@
  * @param nums
  * @param target
  */
-const search = (nums: number[], target: number): number => {
+const binarySearch = (nums: number[], target: number): number => {
   let left = 0;
   let right = nums.length - 1;
 
@@ -22,8 +22,8 @@ const search = (nums: number[], target: number): number => {
   return -1;
 };
 
-const r1 = search([1, 2, 3, 4, 5, 6], 3);
-const r2 = search([1, 2, 3, 4, 5, 6], 5);
-const r3 = search([1, 2, 3, 4, 5, 6, 7], 4);
+const r1 = binarySearch([1, 2, 3, 4, 5, 6], 3);
+const r2 = binarySearch([1, 2, 3, 4, 5, 6], 5);
+const r3 = binarySearch([1, 2, 3, 4, 5, 6, 7], 4);
 
 console.log(r1, r2, r3);
