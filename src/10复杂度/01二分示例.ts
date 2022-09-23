@@ -22,8 +22,8 @@ const binarySearch = (nums: number[], target: number): number => {
   return -1;
 };
 
-const r1 = binarySearch([1, 2, 3, 4, 5, 6], 3);
-const r2 = binarySearch([1, 2, 3, 4, 5, 6], 5);
-const r3 = binarySearch([1, 2, 3, 4, 5, 6, 7], 4);
-
-console.log(r1, r2, r3);
+console.log(
+  binarySearch([1, 2, 3, 4, 5, 6], 3),
+  binarySearch([1, 2, 3, 4, 5, 6], 5),
+  binarySearch([1, 2, 3, 4, 5, 6, 7], 4),
+);

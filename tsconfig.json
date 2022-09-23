@@ -19,5 +19,6 @@
     "removeComments": true, // 是否在输出文件中清除源文件中的注释
     "outDir": "dist"
   },
-  "include": ["src"]
+  "include": ["src"],
+  "exclude": ["**/test"]
 }
